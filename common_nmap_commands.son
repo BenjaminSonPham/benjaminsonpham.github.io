@@ -1,0 +1,22 @@
+Nmap notes
+
+
+Always do `-oN <name>` in the scan to cache the output. 
+
+the "golden nmap command" imo is 
+
+			nmap -sC -sV -oA 
+
+
+		-sC : enable scripting to probe for more information
+		-sV : perform service identification
+		-oA : output all formats (N,X)
+
+
+
+
+
+nmap commands simplifications 
+		-o[N|X|S|G|A] for various outputs
+		-s[L|n|S|T|A|W|M|U|N|F|X|I|Y|O|V] for scans
+		-P[n|S|A|U|Y|E|P|M|O] for specific port commands would give you what you need for the 

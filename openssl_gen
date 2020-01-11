@@ -1,0 +1,13 @@
+openssl req \
+    -key gcp1-demisto1.key\
+    -x509 \
+    -nodes \
+    -new \
+    -out gcp1-demisto1.crt \
+    -subj "/CN=gcp1-demisto1.snowlabs.dev" \
+    -reqexts SAN \
+    -extensions SAN \
+    -config <(cat /usr/lib/ssl/openssl.cnf \
+        <(printf '[SAN]\nsubjectAltName=DNS:gcp1-demisto1.snowlabs.dev')) \
+    -sha256 \
+    -days 3650
