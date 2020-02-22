@@ -303,7 +303,7 @@ bindkey "^[[1;5D" backward-word
 bindkey "\e[3~" delete-char
 
 #enable shift + tab reverse menu complete
-bindkey -M menuselect '^[[Z' reverse-menu-complete
+bindkey '^[[Z' reverse-menu-complete
 
 bindkey -M emacs '^[[3;5~' kill-word
 bindkey -M emacs '^H' backward-kill-word
