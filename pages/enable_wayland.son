@@ -1,0 +1,8 @@
+open /etc/gdm3/custom.conf
+
+look for 
+   
+   [daemon]
+   WaylandEnable=false
+
+uncomment and comment depending on if you want it

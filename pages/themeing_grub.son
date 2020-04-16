@@ -1,0 +1,24 @@
+install all themes to 
+
+      /boot/grub/themes
+
+Edit 
+
+   GRUB_THEME="/boot/grub/themes/<theme name>/theme.txt"
+
+in
+   
+      /etc/default/grub
+
+and 
+
+      sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+if all goes well you should see 
+
+   "Found theme: /boot/grub/themes/<theme name>/theme.txt"
+
+   
+      
+
+

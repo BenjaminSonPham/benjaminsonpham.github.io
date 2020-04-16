@@ -1,0 +1,11 @@
+This generally works for everything
+
+                nmap <ip or dns>
+
+to specify interface, use the "-e" option
+
+for a deep scan, use the 
+
+      nmap -A <ip or dns>
+
+

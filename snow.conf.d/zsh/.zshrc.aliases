@@ -1,7 +1,0 @@
-alias ls="ls --color"
-alias ip="ip -c"
-alias grep="grep --color"
-alias less="less -r"
-alias 'git diff'="git diff --color=always"
-alias hvim='vim -c %%!xxd'
-alias sudo='sudo -E'

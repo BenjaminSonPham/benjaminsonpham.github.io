@@ -1,0 +1,15 @@
+
+switch to the postgres user
+
+    sudo -u postgres -i 
+
+initiate the database 
+
+    initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
+
+to create databases, use 
+
+   createdb <db_name>
+
+   createuser <user_name>
+   

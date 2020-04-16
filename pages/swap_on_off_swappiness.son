@@ -1,0 +1,10 @@
+to restore everything from swap to memory
+
+        swapon/swapoff -a 
+
+to change swappiness value
+   
+         sysctl vm.swappiness=<#>
+
+Where the number is inversely proportional to the percent of RAM being used
+(vm.swappiness = 30 would have swapped pages if memory goes around 70%)

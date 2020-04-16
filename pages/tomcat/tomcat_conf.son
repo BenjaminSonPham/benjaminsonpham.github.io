@@ -1,0 +1,22 @@
+tomcat configuration 
+
+installation folder: 
+	
+	/usr/share/tomcat8
+
+To use an IDE, you also have to give yourself write permissions to 
+            
+            /etc/tomcat8/Catalina/localhost/*
+
+with
+
+            chmod +775 /etc/tomcat8/Catalina/localhost/*
+
+to access tomcat logs, add yourself to the respective group, for 
+
+
+            /var/log/tomcat8
+
+and make sure you have executable rights for your appropriate group (log)
+
+NOTE: either you use an editor or IDE, NOT BOTH. (They would conflict)

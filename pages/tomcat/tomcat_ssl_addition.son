@@ -1,0 +1,12 @@
+according to stackoverflow, the best place to store in *gnix systems is
+
+
+               /etc/ssl/private
+
+                     OR
+
+               /etc/ssl/certs
+
+the "private" directory would be restricted to 700 (root:root)
+
+

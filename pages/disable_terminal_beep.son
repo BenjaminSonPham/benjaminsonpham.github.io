@@ -1,0 +1,9 @@
+
+current session 
+
+         rmmod pcspkr
+
+unload the module on start 
+
+   echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+

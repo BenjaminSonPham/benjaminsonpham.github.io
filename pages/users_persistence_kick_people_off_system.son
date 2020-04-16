@@ -1,0 +1,8 @@
+find who is also logged in and their PID
+
+      who -u 
+
+kill them
+
+   kill -9 PID
+

@@ -1,0 +1,8 @@
+you need to initialize the /var/lib/postgres/data files
+
+su - postgres -c "initdb --locale en_US.UTF-8 -D '/var/lib/postgres/data'"
+
+
+creates a user 'postgres' to be used
+      sudo -u postgres -i
+

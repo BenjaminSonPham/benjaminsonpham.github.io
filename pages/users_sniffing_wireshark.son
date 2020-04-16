@@ -1,0 +1,15 @@
+To allow normal users to capture data, 
+add user to 'wireshark' group
+
+
+sudo gpasswd -a $USER wireshark
+
+		or 
+
+usermod -a -G wireshark stretch
+
+http://packetlife.net/blog/2010/mar/19/sniffing-wireshark-non-root-user/
+
+for more details
+
+

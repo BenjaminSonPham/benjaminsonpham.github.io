@@ -1,0 +1,7 @@
+to compress it's 
+
+dd if=/dev/sdX bs=64K conv=noerror,sync status=progress | gzip -c > /path/to/file.img.gz
+
+to uncompress it's 
+
+gunzip -c /path/to/file.img.gz | dd of=/dev/sdX bs=64K conv=noerror,sync status=progress

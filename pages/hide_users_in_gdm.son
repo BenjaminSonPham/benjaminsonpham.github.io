@@ -1,0 +1,22 @@
+make 
+	/etc/dconf/profile/gdm
+
+and put 
+
+	user-db:user
+	system-db:gdm
+	file-db:/usr/share/gdm/greeter-dconf-defaults
+
+and make 
+
+	/etc/dconf/db/gdm.d/00-login-screen
+
+and put 
+	
+	[org/gnome/login-screen]
+	#Do not show user list
+	disable-user-list=true
+
+Also update dconf with
+
+	dconf update

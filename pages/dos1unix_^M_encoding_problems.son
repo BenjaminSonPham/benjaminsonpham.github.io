@@ -1,0 +1,8 @@
+
+dos2unix to fix it
+
+unix2dos to make it compatible with windows 
+
+^M == "\n" for unix
+
+^M = "\u\n" as an EOF for windows
