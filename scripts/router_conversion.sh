@@ -31,28 +31,22 @@ install_dependencies(){
 
 routerize(){
 
-	interface_out="eth0"
-	interface_in="wlan0"
+	interface_LAN="eth0"
+	interface_WAN="wlan0"
 
 	#configuring static IP address
 	echo "
-	denyinterfaces $interface_out
+	interface $interface_LAN
+	static ip_address=172.17.7.1/24
+	static routers=192.168.0.1
+	static domain_name_servers=192.168.0.1
 	" >> /etc/dhcpcd.conf
 
-	echo "
-	auto $interface_out
-	allow-hotplug $interface_out
-	iface $interface_out inet static 
-		address 172.17.7.1
-		netmask 255.255.255.0
-		network 172.17.7.0
-		broadcast 172.17.7.255
-	" >> /etc/network/interfaces
 
-
+	#Configuring DHCP for $interface_LAN
 	mv /etc/dnsmasq.conf ~/dnsmasq.conf.orig
 	echo "
-	interface=$interface_out
+	interface=$interface_LAN
 	listen-address=172.17.7.1
 	dhcp-range=172.17.7.2,172.17.2.200,255.255.255.0,12h
 	server=1.1.1.1
@@ -63,11 +57,16 @@ routerize(){
 
 
 
+	#Enabling ip forwarding in the kernel
 
+	sed -i's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
-	sed -i.bak s/"#net.ipv4.ip_forward=1"/"net.ipv4.ip_forward=1"/g /etc/sysctl.conf
+	#Iptables configurations
 
-	iptables -t nat -A POSTROUTING -o $interface_in -j MASQUERADE
+	iptables -t nat -A POSTROUTING -o $interface_WAN -j MASQUERADE
+	iptables -A FORWARD -i $interface_WAN -o $interface_LAN -m state --state RELATED,ESTABLISHED -j ACCEPT
+	iptables -A FORWARD -i $interface_LAN -o $interface_WAN -j ACCEPT  
+
 }
 
 check_root
