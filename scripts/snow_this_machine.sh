@@ -33,18 +33,17 @@ printf "source .basrhc.aliases" > .bashrc
 install="changeme"
 
 if [-f /etc/os-release]; then 
-	apt update
-	install="apt install"
+	apt update && apt upgrade
+	install="apt install -y"
 
 if [-f /etc/redhat-release]; then 
-	dnf update
+	dnf update && dnf upgrade
 	install="dnf install"
 
 if [-f /etc/SuSE-release]; then 
-	zypper refresh
-	install="zypper install"
+	zypper ref && zypper up
+	install="zypper -n install"
 
 
 #installing the following packages to the server
-vim 
-mlocate
+$install vim mlocate sudo curl net-tools
