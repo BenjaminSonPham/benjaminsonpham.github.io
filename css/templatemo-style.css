@@ -9,7 +9,7 @@ Color Codes
 ------------
 brown: #986665;
 green: #6CC24A;
-orange: #cc6733;
+white: #EEEEEC;
 blue: #3398cc;
 dark-gray: #676767;
 light-gray: #999999;
@@ -56,8 +56,8 @@ a:hover {
   background-color: #6CC24A;
 }
 
-.tm-bg-orange {
-  background-color: #cc6733;
+.tm-bg-white {
+  background-color: #EEEEEC;
 }
 
 .tm-bg-blue {
@@ -156,6 +156,7 @@ a:hover {
 
 #tmPortfolio {
   padding-top: 80px;
+  background-color: black
 }
 
 .tm-portfolio-item {
@@ -187,8 +188,8 @@ a:hover {
   color: #6CC24A;
 }
 
-.tm-text-orange {
-  color: #cc6733;
+.tm-text-white {
+  color: #EEEEEC;
 }
 
 .tm-text-blue {
@@ -346,4 +347,11 @@ p {
   .tm-brand-container {
     padding: 25px;
   }
+}
+
+.IUseArchBTW{
+  border-radius:100%
+  width:40px;
+  height:40px
+
 }
