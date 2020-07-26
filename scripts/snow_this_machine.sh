@@ -2,8 +2,6 @@
 
 #configure aliases
 
-touch .bashrc.aliases
-
 printf ' alias cls="clear"
  alias ..="cd .."
  alias cd..="cd .."
@@ -21,6 +19,7 @@ printf ' alias cls="clear"
  alias histg="history | grep"
  alias myip="curl http://ipecho.net/plain; echo"
  alias grep="grep --color=auto"
+ alias ip="ip -c"
 ' > .testing_bashrc
 
 printf "source .basrhc.aliases" > .bashrc
