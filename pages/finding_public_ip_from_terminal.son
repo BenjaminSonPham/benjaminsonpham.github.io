@@ -1,3 +1,9 @@
 Basically its just sending a request to the dns resolvers 
 
         host myip.opendns.com resolver1.opendns.com
+
+If you want a shorter one, you could curl/wget from some services (at the expense of security)
+        curl ifconfig.me
+        curl icanhazip.com
+        curl ipecho.net/plain
+        curl ifconfig.co
