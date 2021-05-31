@@ -46,3 +46,7 @@ if [-f /etc/SuSE-release]; then
 
 #installing the following packages to the server
 $install vim mlocate sudo curl net-tools
+
+sudo usermod -aG adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi $user
+
+
