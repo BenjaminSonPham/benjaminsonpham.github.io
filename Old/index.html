@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <title>Home|Ben Jam In</title>
+    
+<!--
+Mini Profile Template
+https://templatemo.com/tm-530-mini-profile
+-->
+  </head>
+  <body>
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="img/spiral.jpeg">
+      <div class="container-fluid tm-brand-container-outer">
+        <div class="row">
+          <div class="col-12">
+            <!-- Logo Area -->
+            <!-- Black transparent bg -->
+            <div class="ml-auto mr-0 tm-bg-white-transparent tm-brand-container-inner">
+              <div class="tm-brand-container text-center">
+                <h1 class="tm-brand-name">Benjamin Pham</h1>
+                <p class="tm-brand-description mb-0">Your friendly neighborhood tinkerer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-bg-black-transparent tm-welcome-container">
+        <div class="container-fluid">
+          <div class="row h-100">
+            <!-- Welcome Text -->
+            <!-- Black transparent bg -->
+            <div class="col-md-7 tm-welcome-left-col text-white">
+              <div class="tm-welcome-left">
+                <h2 class="tm-welcome-title">Welcome to... ME!</h2>
+                <p class="pb-0">
+                  This is where you write a quick summary about yourself
+                 </p>
+              </div>
+            </div>
+            <!-- Brown bg -->
+            <div class="col-md-5">
+              <div class="tm-welcome-right">
+                <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
+                <p class="mb-0">
+                  Please spread a word about templatemo website. Anyone can download free Bootstrap CSS templates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Welcome section -->
+
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <!--Second Job experience-->
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-green">
+                Senior Information Security Associate
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-green">
+                  Tevora 
+                  <span class="tm-title-small">(2018 July to Present)</span>
+                </h3>
+                <p class="mb-0">
+                  Lead projects for fortune 500 companies. 
+                  IR response 
+
+                </p>
+              </div>
+            </div>
+
+            <!--Second Job experience-->
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-green">
+                Information Security Associate
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-green">
+                  Tevora 
+                  <span class="tm-title-small">(July 2018 - October 2019)</span>
+                </h3>
+                <p class="mb-0">
+                  Worked on some high end security stuff using Okta, Splunk, Palo Alto. 
+                  Benchmarked against NIST, CIS, and ISO in our security practices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End portfolio section -->
+
+    <!-- Contact section -->
+    <div id="tmContact" class="parallax-window" data-parallax="scroll" data-image-src="img/abstract-black-background-blue-close-up-preview.jpg">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="tm-contact-items-container">
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-briefcase tm-contact-item-icon"></i>
+                <p class="mb-0">
+                  Quisque venenatis viverra ultrices. Lorem ipsum dolor sit
+                  amet. Nullam sit amet tempor nisl.
+                </p>
+              </div>
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-building tm-contact-item-icon"></i>
+                <p class="mb-0">
+                  You can absolutely feel free to use 
+                   for your web page or any usage for your website.
+                </p>
+              </div>
+
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-balance-scale tm-contact-item-icon"></i>
+                <p class="mb-0">
+                  You are NOT allowed to re-distribute this template in any download website. Else, it is illegal action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div class="row">
+          <footer class="col-12">
+            <p class="text-center tm-copyright-text tm-text-white">
+              I use <img src="img/arch_linux.png" class="IUseArchBTW"/> by the way
+            </p>
+          </footer>
+        </div>
+      </div>
+      <!-- container -->
+    </div>
+    <!-- section -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script>
+      function detectMsBrowser() {
+        using_ms_browser =
+          navigator.appName == "Microsoft Internet Explorer" ||
+          (navigator.appName == "Netscape" &&
+            navigator.appVersion.indexOf("Edge") > -1) ||
+          (navigator.appName == "Netscape" &&
+            navigator.appVersion.indexOf("Trident") > -1);
+
+        if (using_ms_browser == true) {
+          alert(
+            "Please use Chrome or Firefox for the best browsing experience!"
+          );
+        }
+      }
+      function setBrandMarginTop() {
+        var bottomContainerHeight = $(".tm-welcome-container").height();
+
+        $(".tm-brand-container-outer").css({
+          "margin-top": -bottomContainerHeight + "px"
+        });
+      }
+
+      $(function() {
+        setBrandMarginTop();
+        detectMsBrowser();
+
+        // Handle window resize event
+        $(window).resize(function() {
+          setBrandMarginTop();
+        });
+      });
+    </script>
+  </body>
+</html>
